@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyExamDBModelStoreContainer" CdmEntityContainer="MyExamDBEntities">
+    <EntitySetMapping Name="AccountInfoes">
+      <EntityTypeMapping TypeName="MyExamDBModel.AccountInfo">
+        <MappingFragment StoreEntitySet="AccountInfo">
+          <ScalarProperty Name="Account_No" ColumnName="Account_No" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

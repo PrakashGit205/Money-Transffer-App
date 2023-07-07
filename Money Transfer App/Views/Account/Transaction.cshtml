@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Transaction";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+    Lab_Exam.Models.AccountInfo accountInfo = Model;
+    List<Lab_Exam.Models.AccountInfo> list = ViewBag.Accounts;
+}
+<form method="post" action="/Account/Transaction">
+    <table class="table table-bordered table-hover">
+
+        <tr>
+            <td>
+                Account No
+            </td>
+
+            <td>
+                <input value=@accountInfo.Account_No type="text" disabled="disabled" name="Account_No" />
+                <input value=@accountInfo.Account_No type="hidden"  name="Account_No" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Balance
+            </td>
+
+            <td>
+                <input value=@accountInfo.Balance type="text" disabled="disabled" name="Balance" id="balance" />
+                <input value=@accountInfo.Balance type="hidden"  name="Balance" id="balance" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Account Type
+            </td>
+
+            <td>
+                <input value=@accountInfo.AccountType type="text" disabled="disabled" name="AccountType" />
+            </td>
+        </tr>
+        <tr>
+            <td>Other Accuont No</td>
+            <td>
+                <select name="Account" value ="1234">
+                    @foreach (Lab_Exam.Models.AccountInfo account in list)
+                    {
+                        <option value="@account.Account_No">
+                            @account.Account_No
+                        </option>
+
+                    }
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                Amount
+            </td>
+
+            <td>
+                <input value="" name="Amount" type="text" id="amount" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align : center">
+                <input value="Withdraw" name="Amount" type="submit" id="" class="btn btn-primary"  />
+            </td>
+
+        </tr>
+        <tr >
+            <td colspan="2" style="text-align : center" >
+                <p style="color : red">
+                  
+                    @ViewBag.MyMessage
+                </p> </td>
+
+        </tr>
+
+    </table>
+</form>
+

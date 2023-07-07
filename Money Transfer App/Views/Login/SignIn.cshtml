@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+
+
+<form method="post" action="/Login/SignIn">
+ 
+        <br /><br />
+        <div class="table-responsive">
+            <center>
+                <table class="table table-bordered" style="width: 300px">
+                    <tr>
+                        <td>
+                           Enter Email
+                        </td>
+                        <td>
+                            <input type="text" name="Email" value="" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Password
+                        </td>
+                        <td>
+                            <input type="text" name="Password" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="btn" value="Login" class="btn btn-primary" />
+                        </td>
+                    </tr>
+
+                </table>
+                <br />
+                <div class="alert alert-danger">
+                    @ViewBag.message
+                </div>
+            </center>
+        </div>
+   
+</form>
+
+
